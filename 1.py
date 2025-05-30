@@ -3,14 +3,12 @@ def min_points(segments):
         return 0
     segments.sort(key=lambda x: x[1])  
     points = []
-    current_point = segments[0][1]  
-    points.append(current_point)
-    
+    cur_point = segments[0][1]  
+    points.append(cur_point)   
     for seg in segments:
-        if seg[0] > current_point:
-            current_point = seg[1]  
-            points.append(current_point)
-    
+        if seg[0] > cur_point:
+            cur_point = seg[1]  
+            points.append(cur_point)  
     return len(points)
 
 with open("data_prog_contest_problem_1.txt", "r") as f:
@@ -24,5 +22,5 @@ with open("data_prog_contest_problem_1.txt", "r") as f:
             elif len(parts) == 1:
                 segments.append((parts[0], parts[0]))
 
-result = min_points(segments)
-print(result)
+res = min_points(segments)
+print(res)
