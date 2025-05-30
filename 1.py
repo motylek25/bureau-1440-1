@@ -1,5 +1,5 @@
-def seg_end(segment):
-    return segment[1]
+def seg_end(segments):
+    return segments[1]
 
 def min_points(segments):
     if not segments:
