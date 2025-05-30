@@ -1,7 +1,10 @@
+def seg_end(segment):
+    return segment[1]
+
 def min_points(segments):
     if not segments:
         return 0
-    segments.sort(key=lambda x: x[1])  
+    segments.sort(key=seg_end)  
     points = []
     cur_point = segments[0][1]  
     points.append(cur_point)   
